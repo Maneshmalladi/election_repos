@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>final result</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <style>
+        h1{
+
+        text-align:center;
+
+        }
+        div{
+        background-color:#123;
+        color:white;
+        box-size:box-container;
+        border-radius:10px ;
+        width:400px;
+        height:300px;
+        line-height: 1.6;
+        margin:auto;
+        overflow:scroll;
+        }
+        a{
+        margin:0 auto;
+        top:50%;
+        left:50%;
+        transform: translate(-50% ,-50%);
+
+
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <h1> result of searched vote</h1>
+    <div>
+
+    <ul><br>
+        {% for res in result %}
+
+            <li>
+                <strong> SERIAL NUMBER: </strong> {{res.sno}} <br>
+                 <strong>  NAME : </strong> {{res.name}} <br>
+                 <strong> FATHER/HUSBAND NAME: </strong> {{res.fatname}} <br>
+                 <strong> EPIC NUMBER: </strong> {{res.epic}} <br>
+                 <strong> PHONE NUM: </strong> {{res.phone}} <br>
+                 <strong> ADDRESS: </strong> {{res.addr}} <br>
+
+
+            </li>
+        {% endfor %}
+
+    </ul><br>
+    </div>
+
+    <a href="/vote" class="btn btn-primary">Back</a>
+
+</body>
+</html>
